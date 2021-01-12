@@ -8,7 +8,9 @@ function WorkExperience({ job, company, date, description, children }) {
             <h4>{company}</h4>
             <h4>{date}</h4>
             <p>{description}</p>
-            {children}
+            <div className="experience-info">
+                {children}
+            </div>
         </div>
     )
 }

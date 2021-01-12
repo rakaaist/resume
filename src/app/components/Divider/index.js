@@ -1,12 +1,11 @@
 import './index.css';
 
-function Divider({ isFancy}) {
-const className = isFancy ? "divider-fancy" : ""; 
+function Divider({ isFancy, isShort }) {
+    const fancy = isFancy ? "divider-fancy" : "";
+    const short = isShort ? "divider-short" : "";
 
     return (
-        <div className="divider">
-            <div className={className}></div>
-        </div>
+        <hr className={`divider ${fancy} ${short}`} />
     )
 }
 

@@ -11,3 +11,9 @@
     object-fit: cover;
     margin-right: 10px;
   }
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

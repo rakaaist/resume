@@ -32,7 +32,7 @@ function App() {
 
       <main>
 
-        <section className="links-about">
+        <section className="links-about section">
 
           <ContentBox title="Links">
             <Link image href="https://lt.linkedin.com/" imgSrc="https://cdn.iconscout.com/icon/free/png-256/linkedin-168-558642.png">LINKEDIN/rakaaist</Link>
@@ -42,17 +42,17 @@ function App() {
           </ContentBox>
 
           <ContentBox title="About me">
-            <p className="about-info">dfghjkl;kjhghjkllkhghjkllkjhjk,mnbhjkl</p>
+            <p className="about-info">Can-do attitude, attention to details, multitasking skills, good communication and teambuilding skills, fluency in English, result-orientation, creativity, flexibility, willingness to improve my skills.</p>
           </ContentBox>
 
         </section>
 
-        <section className="education-skills">
+        <section className="education-skills section">
 
           <ContentBox title="Education">
             <Education school="UAB 'Programuok'" date="2020.07-2020.12" profession="Fullstack programmer"></Education>
 
-            <Divider />
+            <Divider isShort/>
 
             <Education school="ISM" date="2009.09-2013.02" profession="International business and communication"></Education>
           </ContentBox>
@@ -73,9 +73,9 @@ function App() {
 
         </section>
 
-        <section>
+        <section className="section">
 
-          <ContentBox title="Work experience" className="App-work-experience-container">
+          <ContentBox title="Work experience" className="work-experience-container">
 
             <WorkExperience job="Insurance manager" date="2013-2018" company="Baltic American Clinic">
               Darbas nuostabus. skaiciavau, sokau ir dainavau :D

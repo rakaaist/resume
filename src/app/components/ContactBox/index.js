@@ -4,7 +4,7 @@ function ContactBox({ children, title }) {
     return (
         <div>
             <h2 className="footer-box-title">{title}</h2>
-            <div>{children}</div>
+            <p className="contact-details">{children}</p>
         </div>
     );
 }

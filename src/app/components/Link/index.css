@@ -1,0 +1,13 @@
+.social-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+.ellipse {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }

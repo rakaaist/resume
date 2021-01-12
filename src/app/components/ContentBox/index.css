@@ -1,0 +1,9 @@
+.content-title {
+    text-transform: uppercase;
+}
+
+.App-work-experience-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+  }

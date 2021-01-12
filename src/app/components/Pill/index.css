@@ -1,0 +1,26 @@
+.pill {
+    margin: 20px 0;
+  }
+  
+  .pill-green, .pill-yellow, .pill-red, .pill-grey {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 10px;
+  }
+  
+  .pill-green {
+    background-color: #7ABCAC;
+  }
+  
+  .pill-yellow {
+    background-color: yellow;
+  }
+  
+  .pill-red {
+    background-color: tomato;
+  }
+
+  .pill-grey {
+      background-color: grey;
+  }

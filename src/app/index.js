@@ -5,29 +5,32 @@ import Link from "./components/Link";
 import Education from "./components/Education";
 import WorkExperience from "./components/WorkExperience";
 import List from "./components/List.js";
-import FooterBlock from "./components/Footer/Components/FooterBlock";
 import Footer from "./components/Footer";
+import translations from "./translations";
+import { Fragment, useState } from "react";
 
 import './index.css';
 import Divider from "./components/Divider";
 
 function App() {
+const [lang, setLang] = useState("en");
+
   return (
     <div className="App">
       <header>
         <div className="header-top">
           <div className="navigation">
-            <Select
+            <Select onChange={setLang}
               options={[
-                { value: "en", text: "English" },
-                { value: "lt", text: "Lietuvių" }
+                { value: "en", children: "English" },
+                { value: "lt", children: "Lietuvių" }
               ]}
             />
           </div>
         </div>
         <div className="name-box">
           <h1 className="name">Aistė Rakauskaitė</h1>
-          <h2 className="profession">Programerė</h2>
+          <h2 className="profession">{translations[lang].profession}</h2>
         </div>
       </header>
 
@@ -35,73 +38,53 @@ function App() {
 
         <section className="links-about section">
 
-          <ContentBox title="Links">
-            <Link image href="https://lt.linkedin.com/" imgSrc="https://cdn.iconscout.com/icon/free/png-256/linkedin-168-558642.png">LINKEDIN/rakaaist</Link>
-            <Link image href="https://lt.linkedin.com/" imgSrc="https://cdn.iconscout.com/icon/free/png-256/linkedin-168-558642.png">LINKEDIN/rakaaist</Link>
-            <Link image href="https://lt.linkedin.com/" imgSrc="https://cdn.iconscout.com/icon/free/png-256/linkedin-168-558642.png">LINKEDIN/rakaaist</Link>
-            <Link image href="https://lt.linkedin.com/" imgSrc="https://cdn.iconscout.com/icon/free/png-256/linkedin-168-558642.png">LINKEDIN/rakaaist</Link>
+          <ContentBox title={translations[lang].personalLinks.title}>
+            {translations[lang].personalLinks.links.map(({ href, imgSrc, imgAlt, text }) => {
+              return <Link href={href} imgSrc={imgSrc} imgAlt={imgAlt}>{text}</Link>
+            })}
           </ContentBox>
 
-          <ContentBox title="About me">
-            <p className="about-info">Can-do attitude, attention to details, multitasking skills, good communication and teambuilding skills, fluency in English, result-orientation, creativity, flexibility, willingness to improve my skills.</p>
+          <ContentBox title={translations[lang].aboutMe.title}>
+            <p className="about-info">{translations[lang].aboutMe.text}</p>
           </ContentBox>
 
         </section>
 
         <section className="education-skills section">
 
-          <ContentBox title="Education">
-            <Education school="UAB 'Programuok'" date="2020.07-2020.12" profession="Fullstack programmer"></Education>
-
-            <Divider isShort />
-
-            <Education school="ISM" date="2009.09-2013.02" profession="International business and communication"></Education>
+          <ContentBox title={translations[lang].education.title}>
+            {translations[lang].education.universities.map(({ school, date, profession }, index, array) => {
+              return <Fragment>
+                <Education school={school} date={date} profession={profession}></Education>
+                {index !== array.length - 1 && <Divider isShort />}
+              </Fragment>
+            })}
           </ContentBox>
 
-          <ContentBox title="Personal skills">
-            <Pill color="green">Teamwork</Pill>
-            <Pill color="yellow">Communication</Pill>
-            <Pill color="red">Organization</Pill>
+          <ContentBox title={translations[lang].personalSkills.title}>
+            {translations[lang].personalSkills.skills.map(({ text, level }) => {
+              return <Pill color={level}>{text}</Pill>
+            })}
           </ContentBox>
 
-          <ContentBox title="Technical skills">
-            <Pill color="green">HTML</Pill>
-            <Pill color="green">CSS</Pill>
-            <Pill color="yellow">JAVASCRIPT</Pill>
-            <Pill color="yellow">PHP</Pill>
-            <Pill color="yellow">REACT.JS</Pill>
+          <ContentBox title={translations[lang].technicalSkills.title}>
+            {translations[lang].technicalSkills.skills.map(({ text, level }) => {
+              return <Pill color={level}>{text}</Pill>
+            })}
           </ContentBox>
 
         </section>
 
         <section className="section">
 
-          <ContentBox title="Work experience" className="work-experience-container">
-
-            <WorkExperience job="Insurance manager" date="2013-2018" company="Baltic American Clinic">
-              Darbas nuostabus. skaiciavau, sokau ir dainavau :D
-              <List
-                listItems={[
-                  "English", "Lietuvių"
-                ]} />
-            </WorkExperience>
-
-            <WorkExperience job="Insurance manager" date="2013-2018" company="Baltic American Clinic">
-              Darbas nuostabus. skaiciavau, sokau ir dainavau :D
-              <List
-                listItems={[
-                  "English", "Lietuvių"
-                ]} />
-            </WorkExperience>
-
-            <WorkExperience job="Insurance manager" date="2013-2018" company="Baltic American Clinic">
-              Darbas nuostabus. skaiciavau, sokau ir dainavau :D
-              <List
-                listItems={[
-                  "English", "Lietuvių"
-                ]} />
-            </WorkExperience>
-
+          <ContentBox title={translations[lang].workExperience.title} className="work-experience-container">
+            {translations[lang].workExperience.jobs.map(({ jobTitle, date, company, text, workAchievements }) => {
+              return <WorkExperience job={jobTitle} date={date} company={company}>
+                { text }
+              <List 
+                  listItems={ workAchievements } />
+              </WorkExperience>
+            })}
           </ContentBox>
 
         </section>

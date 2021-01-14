@@ -5,7 +5,8 @@ import Link from "./components/Link";
 import Education from "./components/Education";
 import WorkExperience from "./components/WorkExperience";
 import List from "./components/List.js";
-import ContactBox from "./components/ContactBox";
+import FooterBlock from "./components/Footer/Components/FooterBlock";
+import Footer from "./components/Footer";
 
 import './index.css';
 import Divider from "./components/Divider";
@@ -52,7 +53,7 @@ function App() {
           <ContentBox title="Education">
             <Education school="UAB 'Programuok'" date="2020.07-2020.12" profession="Fullstack programmer"></Education>
 
-            <Divider isShort/>
+            <Divider isShort />
 
             <Education school="ISM" date="2009.09-2013.02" profession="International business and communication"></Education>
           </ContentBox>
@@ -107,22 +108,7 @@ function App() {
 
         <Divider />
 
-        <footer className="footer">
-
-          <ContactBox title="addresss">
-            Jonazoliu st. 9-30, Vilnius
-          </ContactBox>
-
-          <ContactBox title="contacts">
-            <Link href="tel:+37060000123">+37063612218</Link>
-            <Link href="mailto: rakaaist@gmail.com">rakaaist@gmail.com</Link>
-          </ContactBox>
-
-          <ContactBox title="social">
-            <Link href="https://lt.linkedin.com/">LINKEDIN/rakaaist</Link>
-          </ContactBox>
-
-        </footer>
+        <Footer></Footer>
 
       </main>
     </div>

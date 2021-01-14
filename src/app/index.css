@@ -69,11 +69,5 @@ align-items: center;
   margin-bottom: 50px;
 }
 
-.footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 100px;
-  padding: 20px 0;
-}
 
 

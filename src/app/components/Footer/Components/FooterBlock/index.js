@@ -1,12 +1,12 @@
 import './index.css';
 
-function ContactBox({ children, title }) {
+function FooterBlock({ children, title }) {
     return (
         <div>
             <h2 className="footer-box-title">{title}</h2>
-            <p className="contact-details">{children}</p>
+            <div className="contact-details">{children}</div>
         </div>
     );
 }
 
-export default ContactBox;
+export default FooterBlock;

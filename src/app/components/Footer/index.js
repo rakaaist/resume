@@ -1,23 +1,24 @@
-import FooterBlock from "./Components/FooterBlock";
-import Link from "../Link";
-import './index.css';
-import translations from "../../translations.js";
+import FooterBlock from "./components/FooterBlock";
+import Link from "../../components/Link";
 
-function Footer() {
+import translations from "../../translations";
+
+import "./index.css";
+
+
+function Footer({ lang }) {
     return (
-        <footer className="footer">
-
-            {translations.en.footerBlock.map(({ title, items }) => {
+        <footer>
+            {translations[lang].footer.map(({ title, items }) => {
                 return <FooterBlock title={title}>
-                    {items.map(({ href, text }) => {
-                        const Component = href ? Link : "p";
-
-                        return <Component href={href}>{text}</Component>
-                    })
-                }
+                    {items.map(({ text, link }) => {
+                        const Component = link ? Link : "p"
+                        return (
+                            <Component link={link}>{text}</Component>
+                        );
+                    })}
                 </FooterBlock>
             })}
-
         </footer>
     )
 }

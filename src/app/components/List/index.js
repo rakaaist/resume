@@ -1,7 +1,9 @@
-function List({ listItems = [] }) {
+import './index.css';
+
+function List({ list = [] }) {
     return (
         <ul>
-            {listItems.map((value) => (
+            {list.map((value) => (
                 <li>{value}</li>
             ))}
         </ul>

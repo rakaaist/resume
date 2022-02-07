@@ -1,14 +1,13 @@
 import './index.css';
 import Divider from '../Divider';
-
-function ContentBox({ children, title, className = "" }) {
+function ContentBlock({ children, title, className = "" }) {
     return (
-        <div>
-            {title && <h3 className="content-title">{title}</h3>}
+        <div className="content-box">
+            {title && <h4>{title}</h4>}
             <Divider isFancy />
             <div className={className}>{children}</div>
         </div>
     );
 }
 
-export default ContentBox;
+export default ContentBlock;

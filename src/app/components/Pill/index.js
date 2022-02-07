@@ -1,14 +1,13 @@
 import './index.css';
 
-function Pill({ children, color, id }) {
-    const assignedColor = ['red', 'yellow', 'green'].includes(color) ? color : "grey";
-
-
+function Pill({ children, id }) {
     return (
-        <div id={id} className="pill">
-            <span className={`pill-${assignedColor}`}>{children}</span>
+        <div id={id} className="skill">
+            <div className="skill-margin">
+                <span className="pill">{children}</span>
+            </div>
         </div>
     );
 }
 
-export default Pill;
+export default Pill

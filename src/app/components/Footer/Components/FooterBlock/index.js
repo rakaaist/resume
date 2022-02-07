@@ -1,10 +1,10 @@
 import './index.css';
 
-function FooterBlock({ children, title }) {
+function FooterBlock({ children, title = "" }) {
     return (
         <div>
-            <h2 className="footer-box-title">{title}</h2>
-            <div className="contact-details">{children}</div>
+            <h3 className="App-footer-title">{title}</h3>
+            <p className="App-footer-text">{children}</p>
         </div>
     );
 }

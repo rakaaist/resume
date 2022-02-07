@@ -1,19 +1,25 @@
-.social-item {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-  }
-  
-.ellipse {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-  }
 
 a {
+    color: #000000;
     text-decoration: none;
-    color: black;
     font-weight: bold;
+    transition: all 200ms ease-out;
+}
+  
+img {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+    margin-bottom: 8px;
+}
+  
+.App-links-ul > a { 
+    display: flex;
+    align-items: center;
+}
+  
+a:hover,
+a:active,
+a:focus {
+    color: #5781B2;
 }

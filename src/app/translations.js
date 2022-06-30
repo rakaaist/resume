@@ -54,7 +54,7 @@ export default {
                 {
                     title: "Human Resource Manager",
                     company: "Baltic-American Medical & Surgical Clinic",
-                    years: "2020 - now",
+                    years: "2021 - now",
                     description: "Implementation of new processes to improve work quality, close communication and collection of feedback from colleagues, management of recruitment process – screening, interviewing and short-listing potential candidates, coordination of adaptation and competency assessment processes for new employees, administration of personnel documents, recruitment and placement procedures, preparation and execution of purchase orders for company’s internal projects.",
                 },
                 {
@@ -161,7 +161,7 @@ export default {
                 {
                     title: "Personalo vadovė",
                     company: "UAB Baltijos ir Amerikos terapijos ir chirurgijos klinika",
-                    years: "2020 - dabar",
+                    years: "2021 - dabar",
                     description: "Naujų procesų, gerinančių darbo kokybę, įgyvendinimas, glaudus bendravimas su kolegomis ir atgalinio ryšio analizavimas, darbuotojų paieškos procesų organizavimas ir įgyvendinimas, naujų darbuotojų adaptacijos ir kompetencijų vertinimo procesų koordinavimas, personalo dokumentų administravimas, įdarbinimo ir išdarbinimo procedūros, pirkimo užsakymų vidiniams įmonės projektams rengimas bei vykdymas.",
                 },
                 {
